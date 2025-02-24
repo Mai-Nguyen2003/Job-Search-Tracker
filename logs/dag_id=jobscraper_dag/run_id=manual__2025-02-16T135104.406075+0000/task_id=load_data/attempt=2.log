@@ -1,0 +1,20 @@
+[2025-02-16T13:59:39.314+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-16T13:59:39.361+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: jobscraper_dag.load_data manual__2025-02-16T13:51:04.406075+00:00 [queued]>
+[2025-02-16T13:59:39.385+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: jobscraper_dag.load_data manual__2025-02-16T13:51:04.406075+00:00 [queued]>
+[2025-02-16T13:59:39.395+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 3
+[2025-02-16T13:59:39.456+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): load_data> on 2025-02-16 13:51:04.406075+00:00
+[2025-02-16T13:59:39.471+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=369) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-16T13:59:39.474+0000] {standard_task_runner.py:72} INFO - Started process 371 to run task
+[2025-02-16T13:59:39.480+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'jobscraper_dag', 'load_data', 'manual__2025-02-16T13:51:04.406075+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/jobscraper.py', '--cfg-path', '/tmp/tmpy8s9m34l']
+[2025-02-16T13:59:39.490+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask load_data
+[2025-02-16T13:59:39.597+0000] {task_command.py:467} INFO - Running <TaskInstance: jobscraper_dag.load_data manual__2025-02-16T13:51:04.406075+00:00 [running]> on host 631dcef61fc7
+[2025-02-16T13:59:39.787+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='mainguyen' AIRFLOW_CTX_DAG_ID='jobscraper_dag' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-16T13:51:04.406075+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-16T13:51:04.406075+00:00'
+[2025-02-16T13:59:39.790+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-16T13:59:39.886+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-16T13:59:39.908+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-16T13:59:39.909+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=jobscraper_dag, task_id=load_data, run_id=manual__2025-02-16T13:51:04.406075+00:00, execution_date=20250216T135104, start_date=20250216T135939, end_date=20250216T135939
+[2025-02-16T13:59:39.987+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-16T13:59:40.021+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-16T13:59:40.028+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
